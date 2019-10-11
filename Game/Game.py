@@ -4,7 +4,7 @@ import time
 
 import pygame as pyg
 
-import Snake
+from Snake.Snake import Snake
 
 
 class Game:
@@ -74,8 +74,8 @@ class Game:
         head_image = pyg.transform.scale(head_image, (self.setting.cell_size, self.setting.cell_size))
         body_image = pyg.transform.scale(body_image, (self.setting.cell_size, self.setting.cell_size))
 
-        snake = Snake.Snake.Snake(self.screen, self.setting.cell_size, self.setting.center_position, head_image,
-                                  body_image)
+        snake = Snake(self.screen, self.setting.cell_size, self.setting.center_position, head_image,
+                      body_image)
         snake.add_body_part("Right")
         snake.add_body_part("Right")
         return snake
